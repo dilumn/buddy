@@ -1,0 +1,17 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - '**/tmp/**/*'
+    - '**/script/**/*'
+    - Rakefile
+    - Gemfile
+  UseCache: true
+  TargetRubyVersion: 2.4
+
+Metrics/BlockLength:
+  Exclude:
+    - 'api/endpoints/**/*'
+
+Metrics/LineLength:
+  Max: 120

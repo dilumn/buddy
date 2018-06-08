@@ -1,0 +1,32 @@
+# frozen_string_literal: true
+
+require 'rake'
+
+require 'rspec/core'
+require 'rspec/core/rake_task'
+
+require 'yaml'
+require 'logger'
+require 'active_record'
+
+RSpec::Core::RakeTask.new(:spec)
+
+require 'rubocop/rake_task'
+RuboCop::RakeTask.new(:rubocop)
+
+task default: [:spec, :rubocop]
+
+require File.expand_path('../config/environment', __FILE__)
+
+require 'grape-swagger/rake/oapi_tasks'
+GrapeSwagger::Rake::OapiTasks.new(::Api::Base)
+
+require 'starter/rake/grape_tasks'
+Starter::Rake::GrapeTasks.new(::Api::Base)
+
+require 'standalone_migrations'
+StandaloneMigrations::Tasks.load_tasks
+
+#loading all custom rake tasks
+#NOTE: turned off as it was running rake takes twice
+# Dir.glob('lib/tasks/*.rake').each { |r| load r}

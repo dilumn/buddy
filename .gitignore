@@ -1,0 +1,5 @@
+.DS_Store
+
+*.log
+thin.pid
+app/coverage
