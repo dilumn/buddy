@@ -5,8 +5,6 @@ require_relative 'config/application'
 
 use Rack::CommonLogger
 
-use Rack::Attack
-
 use Rack::Cors do
   allow do
     origins '*'
