@@ -4,6 +4,7 @@ cd /home/dilumn/buddy
 git branch --set-upstream-to=origin/master master
 git pull
 git checkout master
+bundle install
 thin stop
 thin start -d
 exit
