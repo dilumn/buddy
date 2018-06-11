@@ -1,2 +1,0 @@
-#!/bin/bash
-pry -r /app/config/boot.rb
