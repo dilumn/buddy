@@ -3,3 +3,4 @@
 *.log
 thin.pid
 app/coverage
+*.json

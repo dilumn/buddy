@@ -1,0 +1,3 @@
+require 'irb'
+
+binding.irb
