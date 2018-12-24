@@ -1,3 +1,0 @@
-require 'irb'
-
-binding.irb
