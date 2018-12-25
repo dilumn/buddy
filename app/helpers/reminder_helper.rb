@@ -1,4 +1,4 @@
-
+# Search for reminders to notify on today
 module ReminderHelper
 
   def self.today_reminders
