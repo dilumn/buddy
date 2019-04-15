@@ -4,4 +4,5 @@
 
 require_relative 'config/application'
 
+# run application starts
 run Application
