@@ -1,6 +1,6 @@
 module ReminderHelper
-
-  def self.today_reminders
+  extent self
+  def today_reminders
     reminders = JSON.parse(File.read('json/dilum_reminders.json'))
 
     today = reminders.select { |reminder|
